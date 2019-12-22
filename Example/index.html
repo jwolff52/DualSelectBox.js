@@ -1,0 +1,47 @@
+<!Doctype HTML>
+<html>
+    <head>
+        <title>DualSelectBox.js Example</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="row justify-content-center">
+            <h2>DualSelectBox Example</h2>
+        </div>
+        <hr />
+        <div class="row justify-content-center">
+            <div class="col-md-5 col-offset-2">
+                <form method="get">
+                    <div class="form-group row align-items-center">
+                        <div class="col">
+                            <label class="control-label">Left Box</label>
+                            <select id="dsb-leftBox" size="8" class="form-control" multiple></select>
+                        </div>
+                        <div id="dsb-buttons" class="text-center"></div>
+                        <div class="col">
+                            <label class="control-label">Right Box</label>
+                            <select id="dsb-rightBox" size="8" class="form-control" multiple></select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input id="dsb-submit" type="submit" value="Submit" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+        <script src="./js/DualSelectBox.js"></script>
+        <script>
+            var leftBox = [];
+            var rightBox = [];
+            
+            // Populate test data
+            for(var i=0; i < 15; i ++) {
+                leftBox.push({name: "Test " + i, id: i});
+            }
+
+            new DualSelectBox(leftBox, rightBox).init().RightSubmit();
+        </script>
+    </body>
+</html>
