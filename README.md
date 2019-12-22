@@ -1,6 +1,6 @@
 # DualSelectBox.js
 
-A Javascript class that allows you to move values between two select boxes and then select all of the options in one of the boxes for submission. 
+A Javascript class that allows you to move values between two select boxes and then select all of the options in one of the boxes for submission. Check out an example [here](https://jwolff52.github.io/DualSelectBox.js/Example/)!
 
 ### The following variables *must* be passed to the constructor on creation:
   * `leftBox` - an array of JSON objects in the form of `{name,id}` to be placed in the left `<select>` element  
